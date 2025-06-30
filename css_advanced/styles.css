@@ -1,0 +1,287 @@
+/* ========== Global Reset & Base ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fff;
+  color: #161616;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ========== Header ========== */
+header {
+  padding: 20px 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 35px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav li a {
+  font-weight: 600;
+  font-size: 16px;
+  color: #161616;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  background: url('/css_advanced/CSS\ Advanced/Object.png') no-repeat center center/cover;
+  text-align: center;
+  padding: 150px 20px;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.hero .tags {
+  margin-bottom: 30px;
+}
+
+.hero .tags span {
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.hero button {
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #ff5c84, #ce6dfb);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* ========== Learn from the pros ========== */
+.learn-pros {
+  background-color: #071629;
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.learn-pros h2 {
+  color: #ce6dfb;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.learn-pros .profiles {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.learn-pros .profile {
+  text-align: center;
+  max-width: 150px;
+}
+
+.learn-pros .profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+/* ========== Quote Section ========== */
+.quote {
+  background-color: #c271ff;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.quote img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.quote p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.quote span {
+  display: block;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* ========== Videos Section ========== */
+.videos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.videos h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.videos h2 strong {
+  font-weight: 700;
+}
+
+.videos .video-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.videos .video-card {
+  width: 220px;
+  text-align: left;
+}
+
+.videos .video-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.videos .video-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.videos .video-card .author {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.videos .video-card .duration {
+  font-size: 14px;
+  color: #c271ff;
+}
+
+/* ========== Free Membership ========== */
+.membership {
+  background-color: #071629;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.membership h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.membership .features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.membership .feature {
+  width: 200px;
+}
+
+.membership .feature img {
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.membership button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #c271ff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ========== FAQ Section ========== */
+.faq {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.faq .faq-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  text-align: left;
+}
+
+.faq .faq-list h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #071629;
+  color: white;
+  padding: 30px 20px;
+  text-align: right;
+}
+
+footer .footer-logo {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer .socials img {
+  width: 20px;
+  margin: 0 10px;
+}
+
+footer p {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #ccc;
+}

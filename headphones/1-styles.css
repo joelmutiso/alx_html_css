@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    background-color: #1e1e1e;
+}
+
+header {
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6565;
+}
+
+.hero {
+    background-image: url("images/headphones_hero_1.jpg");
+    /* update if the filename differs */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    max-width: 700px;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FF6565;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.what-we-do {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section-desc {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    /* center the icons */
+    gap: 40px;
+    /* space between icons */
+    flex-wrap: nowrap;
+    /* no wrap on desktop */
+}
+
+.icon-item {
+    flex: 1 1 200px;
+    /* flexible width, min 200px */
+    max-width: 220px;
+    text-align: center;
+}
+
+.icon-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.icon-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.icon-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+@media (max-width: 768px) {
+    .flex-row {
+        flex-wrap: wrap;
+    }
+
+    .flex-col {
+        flex: 1 1 250px;
+        max-width: none;
+    }
+}

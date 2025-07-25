@@ -1,4 +1,11 @@
-/* ========== Global Reset & Base ========== */
+/* Base Styles */
+:root {
+  --color-primary: #C271FF;
+  --color-dark: #071629;
+  --color-white: #FFFFFF;
+  --color-gray: rgba(7, 22, 41, 0.5);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,281 +14,516 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #fff;
-  color: #161616;
+  color: var(--color-dark);
   line-height: 1.6;
 }
 
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+img {
+  max-width: 100%;
 }
 
 ul {
   list-style: none;
 }
 
-/* ========== Header ========== */
-header {
-  padding: 20px 0;
-  background-color: #fff;
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 22px;
+  padding: 13px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #a94fd9;
+}
+
+/* Text Styles */
+.text-purple {
+  color: var(--color-primary);
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Header & Hero Section */
+.hero-section {
+  background-image: url('/css_advanced/Images/Object.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  padding: 35px 0 90px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 30px;
+}
+
+.logo-part {
+  position: absolute;
+}
+
+.logo-part:nth-child(1) {
+  width: 9px;
+  height: 14px;
+  top: 0;
+  left: 5px;
+}
+
+.logo-part:nth-child(2) {
+  width: 9px;
+  height: 14px;
+  top: 0;
+  left: 28px;
+}
+
+.logo-part:nth-child(3) {
+  width: 44px;
+  height: 16px;
+  top: 16px;
+  left: 0;
+}
+
+.logo-text {
+  font-family: 'Coiny', cursive;
+  font-size: 18px;
+  margin-left: 55px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.hero-content h1 {
+  font-size: 120px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.keywords {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 10px 0 40px;
+}
+
+.keywords span {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Pros Section */
+.pros-section {
+  text-align: center;
+}
+
+.pros-section h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 70px;
+}
+
+.pros-section h2 .text-purple {
+  font-weight: 700;
+}
+
+.pros-container {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.pro-card {
+  width: 150px;
+}
+
+.pro-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.pro-card h3 {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.pro-card p {
+  font-style: italic;
+  font-size: 16px;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  background-color: #C271FF;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  padding: 100px 0;
+  margin-top: 0px;
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.testimonial-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-text blockquote {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.testimonial-text h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.testimonial-text p {
+  font-size: 22px;
+  font-style: italic;
+}
+
+/* Tutorials Section */
+.tutorials-section {
+  padding: 80px 0;
+}
+
+.tutorials-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tutorial-card {
+  width: 255px;
+  box-shadow: 0px 2px 4px rgba(7, 22, 41, 0.18);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  position: relative;
+  height: 154px;
+  background-color: #f8f8f8;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  background-image: url('https://c.animaapp.com/mdipvhjboe8cxC/img/oval.svg');
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon img {
+  width: 13px;
+  height: 16px;
+}
+
+.tutorial-content {
+  padding: 15px;
+}
+
+.tutorial-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tutorial-content > p {
+  font-size: 14px;
+  color: var(--color-gray);
+  margin-bottom: 30px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.author h4 {
+  font-size: 14px;
+  color: var(--color-primary);
+  font-weight: normal;
+}
+
+.tutorial-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo img {
-  height: 35px;
-}
-
-nav ul {
+.rating {
   display: flex;
-  gap: 30px;
+  gap: 5px;
 }
 
-nav li a {
-  font-weight: 600;
-  font-size: 16px;
-  color: #161616;
+.rating i {
+  color: var(--color-primary);
+  font-size: 15px;
 }
 
-/* ========== Hero Section ========== */
-.hero {
-  background: url('/css_advanced/CSS\ Advanced/Object.png') no-repeat center center/cover;
-  text-align: center;
-  padding: 150px 20px;
-  color: #fff;
-}
-
-.hero h1 {
-  font-size: 60px;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-
-.hero .tags {
-  margin-bottom: 30px;
-}
-
-.hero .tags span {
-  margin: 0 10px;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.hero button {
-  padding: 15px 40px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  background: linear-gradient(to right, #ff5c84, #ce6dfb);
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-/* ========== Learn from the pros ========== */
-.learn-pros {
-  background-color: #071629;
-  color: white;
-  text-align: center;
-  padding: 60px 0;
-}
-
-.learn-pros h2 {
-  color: #ce6dfb;
-  font-weight: 600;
-  margin-bottom: 50px;
-}
-
-.learn-pros .profiles {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.learn-pros .profile {
-  text-align: center;
-  max-width: 150px;
-}
-
-.learn-pros .profile img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin-bottom: 15px;
-}
-
-/* ========== Quote Section ========== */
-.quote {
-  background-color: #c271ff;
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.quote img {
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  margin-bottom: 15px;
-}
-
-.quote p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 10px auto;
-}
-
-.quote span {
-  display: block;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-/* ========== Videos Section ========== */
-.videos {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.videos h2 {
-  font-size: 32px;
-  font-weight: 300;
-  margin-bottom: 50px;
-}
-
-.videos h2 strong {
-  font-weight: 700;
-}
-
-.videos .video-list {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.videos .video-card {
-  width: 220px;
-  text-align: left;
-}
-
-.videos .video-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.videos .video-card h3 {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.videos .video-card .author {
+.duration {
   font-size: 14px;
-  color: #888;
-  margin-bottom: 5px;
+  color: var(--color-primary);
 }
 
-.videos .video-card .duration {
-  font-size: 14px;
-  color: #c271ff;
-}
-
-/* ========== Free Membership ========== */
-.membership {
+/* Membership Section */
+.membership-section {
   background-color: #071629;
-  color: white;
-  padding: 60px 20px;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  padding: 80px 0;
   text-align: center;
 }
 
-.membership h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.membership .features {
+.benefits-container {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 80px;
+  margin-bottom: 70px;
   flex-wrap: wrap;
 }
 
-.membership .feature {
+.benefit-card {
   width: 200px;
 }
 
-.membership .feature img {
-  height: 50px;
-  margin-bottom: 15px;
+.icon-container {
+  width: 45px;
+  height: 35px;
+  margin: 0 auto 20px;
+  position: relative;
 }
 
-.membership button {
-  margin-top: 30px;
-  padding: 15px 30px;
-  background-color: #c271ff;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
+.benefit-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-/* ========== FAQ Section ========== */
-.faq {
-  background-color: #fff;
-  padding: 80px 20px;
-  text-align: center;
+.benefit-card p {
+  font-size: 14px;
 }
 
-.faq h2 {
-  font-size: 36px;
-  font-weight: 300;
+/* FAQ Section */
+.faq-section {
+  padding: 80px 0;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.faq-column {
+  flex: 1;
+  max-width: 350px;
+}
+
+.faq-item {
   margin-bottom: 50px;
 }
 
-.faq .faq-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  text-align: left;
-}
-
-.faq .faq-list h3 {
+.faq-item h3 {
   font-size: 16px;
-  margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-/* ========== Footer ========== */
-footer {
-  background-color: #071629;
-  color: white;
-  padding: 30px 20px;
-  text-align: right;
-}
-
-footer .footer-logo {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-footer .socials img {
-  width: 20px;
-  margin: 0 10px;
-}
-
-footer p {
+.faq-item p {
   font-size: 14px;
-  margin-top: 15px;
-  color: #ccc;
+  color: var(--color-gray);
+  line-height: 24px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 70px 0 30px;
+  position: relative;
+}
+
+.footer-content {
+  position: relative;
+  height: 150px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links i {
+  font-size: 30px;
+  color: var(--color-white);
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.35;
+  font-size: 12px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 80px;
+  }
+  
+  .pros-container, 
+  .tutorials-container, 
+  .benefits-container {
+    gap: 30px;
+  }
+  
+  .faq-container {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+  
+  .hero-content h1 {
+    font-size: 60px;
+  }
+  
+  .keywords {
+    gap: 30px;
+  }
+  
+  .testimonial-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .faq-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  
+  .keywords {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
